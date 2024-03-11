@@ -1,0 +1,27 @@
+
+html 
+    head 
+
+
+        title= 'users list'
+        link(rel="stylesheet",type='text/css', href="/style.css")
+    body 
+        h1(class='header')= 'users list'
+        //- p= '' + back.users[1]
+        div(class='users') 
+            - const el = users
+            each val in el
+                div(class='user')= 'username:'+val.name + ' age:'+val.age + ' id:'+val.id + ' password:'+val.password 
+                br 
+        
+        a(href='/create') create user
+        h1 find user
+        form(method='POST' action='/user')
+            p name : 
+            input(name='name' type='text')
+            p password : 
+            input(type='text' name='password')
+            button(type='submit') submit
+ 
+                
+        

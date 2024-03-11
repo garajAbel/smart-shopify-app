@@ -1,0 +1,23 @@
+
+
+
+if finded 
+
+    head 
+        title= smart.type
+    div(class='block')
+        
+        h1= smart.type 
+        if smart.op 
+            h3= 'operativka : yes'
+        else 
+            h3= 'operativka : no'
+        h3= 'display : ' + smart.display 
+        h2= 'price : ' + smart.price
+        a(href="/") to menu 
+
+            
+        
+
+else 
+    h1(style='color:red') the smart is not finded 

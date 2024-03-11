@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Новая статья
+  style
+  body
+    h1 Новая статья
+    form(method="POST" action="/users")
+      input(type="text" name="name")
+      input(type="text" name="age")
+      input(type="text" name="password")
+      button(type="submit") Создать
+    a(href='/')

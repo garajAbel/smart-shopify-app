@@ -1,0 +1,55 @@
+ 
+
+  
+
+
+link(rel="stylesheet",type='text/css' href="/style.css")
+
+ul
+  li Item A
+  li Item B
+a(id = 'rip' href='/users') Item C  
+
+div 
+  h1 hello world
+
+input(
+  type='checkbox'
+  name='agreement'
+  checked
+)
+
+
+- var url = 'pug-test.html';
+a(href='/' + url) Link
+|
+|
+- url = 'https://example.com/'
+a(href=url) Another link
+
+ul
+  each val, index in ['zero', 'one', 'two']
+    li= index + ': ' + val
+
+- var friends = 8
+case friends
+  when 0
+    p you have no friends
+  when 1
+    p you have a friend
+  default
+    p you have #{friends} friends
+
+- const days = ['monday','sunday','friday']
+ul 
+  each day, number in days
+    li= number + ' : ' + day
+
+
+h1 Users info 
+ul 
+  each val,number in users 
+    li= number + 1+ ') name : ' + val.name + '; age : '+ val.age
+    
+    
+  

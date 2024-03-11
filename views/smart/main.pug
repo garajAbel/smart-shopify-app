@@ -1,0 +1,33 @@
+head
+    link(rel="stylesheet", href="/smartStyle.css")
+    title= back.mainName
+
+div(id='main')
+    
+    form(method='POST',id='search',action='/search')
+         
+        input(type='text',placeholder="smart type",name='type')
+        button(type='submit') O
+    
+    div(id='head')
+        a(href="/create/1") создать 
+        a(href="/") аккаунт 
+        a(href="/Us") о нас
+        a(href="/delete/1") удалить
+    
+ 
+div 
+    img(src="/smart.png",id='img', alt="smart" , width='100%',height='auto')
+
+ul
+    h2(style='text-align:center;') рекомендаций
+    each val in back.smartList
+        div(class='block') 
+            h3= val.type 
+             
+            h4= 'price : ' + val.price
+            - link = '/smart/type/'+ val.type
+            a(href=link) more
+
+
+    
